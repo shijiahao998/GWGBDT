@@ -544,13 +544,12 @@ effectively influence bike sharing usage?</h1>
 <div id="TOC">
 <ul>
 <li><a href="#package-and-data" id="toc-package-and-data"><span class="toc-section-number">1</span> Package and data</a></li>
-<li><a href="#modelling" id="toc-modelling"><span class="toc-section-number">2</span> 1. Modelling</a></li>
-<li><a href="#evaluate-model-performance" id="toc-evaluate-model-performance"><span class="toc-section-number">3</span> 2. Evaluate model
-performance</a></li>
-<li><a href="#calculate-and-visualize-the-relative-importance" id="toc-calculate-and-visualize-the-relative-importance"><span class="toc-section-number">4</span> 3. Calculate and visualize the
-relative importance</a></li>
-<li><a href="#estimate-accumulated-local-effects-ale" id="toc-estimate-accumulated-local-effects-ale"><span class="toc-section-number">5</span> 4. Estimate Accumulated Local
-Effects (ALE)</a></li>
+<li><a href="#modelling" id="toc-modelling"><span class="toc-section-number">2</span> Modelling</a></li>
+<li><a href="#evaluate-model-performance" id="toc-evaluate-model-performance"><span class="toc-section-number">3</span> Evaluate model performance</a></li>
+<li><a href="#calculate-and-visualize-the-relative-importance" id="toc-calculate-and-visualize-the-relative-importance"><span class="toc-section-number">4</span> Calculate and visualize the relative
+importance</a></li>
+<li><a href="#estimate-accumulated-local-effects-ale" id="toc-estimate-accumulated-local-effects-ale"><span class="toc-section-number">5</span> Estimate Accumulated Local Effects
+(ALE)</a></li>
 </ul>
 </div>
 
@@ -583,7 +582,7 @@ features.</p>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>bikedata <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;F:/R/2025/data/bikedata.csv&quot;</span>)</span></code></pre></div>
 </div>
 <div id="modelling" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> 1. Modelling</h1>
+<h1><span class="header-section-number">2</span> Modelling</h1>
 <p>First, we calculated the spatial weight matrix, which is based on the
 assumption that the observed bike station <em>j</em> (<span class="math inline">\(j \in [1, N]\)</span>, where <span class="math inline">\(N\)</span> is the total number of bike stations,
 i.e., the sample size) exerts a stronger influence as it is spatially
@@ -679,7 +678,7 @@ according to the capabilities of your device.</p>
 <span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a><span class="fu">print</span>(e_time<span class="sc">-</span>b_time)</span></code></pre></div>
 </div>
 <div id="evaluate-model-performance" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> 2. Evaluate model
+<h1><span class="header-section-number">3</span> Evaluate model
 performance</h1>
 <p>This section calculates the average performance metrics across all
 local models, including R², MAE, and RMSE.</p>
@@ -705,8 +704,8 @@ local models, including R², MAE, and RMSE.</p>
 <span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="fu">mean</span>(r2_table<span class="sc">$</span>rmse)<span class="co">#17.63087</span></span></code></pre></div>
 </div>
 <div id="calculate-and-visualize-the-relative-importance" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> 3. Calculate and
-visualize the relative importance</h1>
+<h1><span class="header-section-number">4</span> Calculate and visualize
+the relative importance</h1>
 <p>This section organizes the Relative Importance (RI) results. First,
 the RI values from all local models are aggregated into one table. Then,
 for each local model, the most important variable is identified. The
@@ -832,7 +831,7 @@ ranking of the relative importance of job accessibility</div>
 </div>
 </div>
 <div id="estimate-accumulated-local-effects-ale" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> 4. Estimate Accumulated
+<h1><span class="header-section-number">5</span> Estimate Accumulated
 Local Effects (ALE)</h1>
 <p>This section visualizes the Accumulated Local Effects (ALE) plots.
 Similarly, the global ALE for each variable is obtained by averaging its
@@ -923,8 +922,9 @@ ALE values across all local models.</p>
 <div class="figcaption">sample figure: ALE plot of job
 accessibility</div>
 </div>
-<p>This concludes the complete process of building the GW-GBDT model.
-Thank you for reading!</p>
+<p>This concludes the complete process of building the GW-GBDT
+model.</p>
+<p>Thank you for reading!</p>
 </div>
 
 
